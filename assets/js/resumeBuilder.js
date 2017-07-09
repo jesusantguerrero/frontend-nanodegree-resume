@@ -18,7 +18,7 @@ const model = {
           location: "La Romana, R.D"
         },
         welcomeMessage: "keep it simple but make it awesome",
-        skills: ["HTML/CSS", "javaScript/jQuery", "PHP/CodeIgniter", "Electron", "C#"],
+        skills: ["HTML/CSS", "javaScript/jQuery", "PHP/CodeIgniter", "Electron", "C#","MySql","Git"],
         biopic: "https://avatars2.githubusercontent.com/u/17421742?v=3&u=2ecdc1e593c09e20d9e4a2508a2d99dc5d7200e6&s=400"
       }
       
@@ -153,6 +153,7 @@ const bioView = {
   display() {
     this.header         = $('#header')
     this.topContacts    = $('#topContacts')
+    this.profileInfo   = $('.profile-info')
     this.footerContacts = $('#footerContacts')
 
     var bio = octopus.getBioInfo()
@@ -164,13 +165,16 @@ const bioView = {
     var name = HTMLheaderName.replace(placeholder, bio.name);
     var role = HTMLheaderRole.replace(placeholder, bio.role)
     var picture = HTMLbioPic.replace(placeholder, bio.biopic)
-    var contacts = HTMLemail.replace(placeholder, bio.contacts.email)
+    var message = HTMLwelcomeMsg.replace(placeholder, bio.welcomeMessage)
+    var skills = ''
+    var contacts = ' ' 
+    
+    contacts += HTMLmobile.replace(placeholder, bio.contacts.mobile)
+    contacts += HTMLemail.replace(placeholder, bio.contacts.email)
     contacts += HTMLgithub.replace(placeholder, bio.contacts.github)
     contacts += HTMLtwitter.replace(placeholder, bio.contacts.twitter)
     contacts += HTMLlocation.replace(placeholder, bio.contacts.location)
-    contacts += HTMLmobile.replace(placeholder, bio.contacts.mobile)
-    var message = HTMLwelcomeMsg.replace(placeholder, bio.welcomeMessage)
-    var skills = ''
+    
 
     bio.skills.forEach((skill) => {
       skills += HTMLskills.replace(placeholder, skill)
@@ -178,12 +182,12 @@ const bioView = {
 
     this.topContacts.before(name)
     this.topContacts.before(role)
-    this.topContacts.after(picture)
+    this.profileInfo.append(picture)
     this.topContacts.append(contacts)
     this.footerContacts.append(contacts)
-    this.header.append(message)
-    this.header.append(HTMLskillsStart)
-    this.header.find('#skills').append(skills)
+    this.profileInfo.append(message)
+    this.profileInfo.append(HTMLskillsStart)
+    this.profileInfo.find('#skills').append(skills)
   }
 }
 

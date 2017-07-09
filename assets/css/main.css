@@ -19,11 +19,26 @@ hr {
 img {
   border-radius: 4px; }
 
+.profile-info {
+  display: flex;
+  flex-direction: row;
+  width: 100%; }
+
 .biopic {
-  min-height: 200px;
+  height: 200px;
   border-radius: 4px;
   padding: 0;
   margin: 10px; }
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%; }
+  .skills-container .skills-h3,
+  .skills-container #skills {
+    width: 180px; }
 
 h1 {
   color: #fff;
@@ -44,7 +59,13 @@ h3 {
   color: #fff; }
 
 .welcome-message {
-  padding: 20px; }
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bolder;
+  width: 100%; }
+
+.picture {
+  width: 100%; }
 
 .education-entry {
   min-height: 57px;
