@@ -21,6 +21,7 @@ const model = {
         skills: ["HTML/CSS", "javaScript/jQuery", "PHP/CodeIgniter", "Electron", "C#"],
         biopic: "https://avatars2.githubusercontent.com/u/17421742?v=3&u=2ecdc1e593c09e20d9e4a2508a2d99dc5d7200e6&s=400"
       }
+      
     this.education = {
         schools: [{
             name: "Universidad Dominicana O&M",
@@ -59,7 +60,7 @@ const model = {
     this.work = {
         jobs: [{
             employer: 'Insane Code Inc.',
-            title: 'Founder and CIO',
+            title: 'Founder and CEO',
             location: 'La Romana, R.D.',
             dates: 'in progress',
             description: 'Orginize and run the company in order to make it the number one in La Romana'
@@ -80,18 +81,18 @@ const model = {
             title: 'IC Payment',
             dates: '2017',
             description: 'Facturation Program for an internet Provider| PHP | CSS, HTML,JS, Ajax, Mysql',
-            images: ['./images/197x148.gif']
+            images: ['./assets/images/197x148.gif']
           }, {
             title: 'IC Notes',
             dates: '2017',
             description: 'Facturation Program for an internet Provider| PHP | CSS, HTML,JS, Ajax, Mysql',
-            images: ['./images/197x148.gif']
+            images: ['./assets/images/197x148.gif']
           },
           {
             title: 'jesusantguerrero.com',
             dates: '2017',
             description: 'Facturation Program for an internet Provider| PHP | CSS, HTML,JS, Ajax, Mysql',
-            images: ['./images/197x148.gif']
+            images: ['./assets/images/197x148.gif']
           }
         ]
       }
